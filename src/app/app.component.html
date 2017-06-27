@@ -1,5 +1,8 @@
 <h1>Simple App</h1>
 
-<div [@signal]="'go'" class="traffic-light">
-
+<div [@signal]="signal" class="traffic-light">
 </div>
+
+<button (click)="onGoClick()">Go</button>
+
+<button (click)="onStopClick()">Stop</button>
