@@ -1,0 +1,5 @@
+<button class="tabs__tab" (click)="nextTab()">Next Tab</button>
+<div class="tabs__tab-bar">
+    <ng-content select="ce-tab-title,.ce-tab-title"></ng-content>
+</div>
+<ng-content select="ce-tab-content,.ce-tab-content"></ng-content>
