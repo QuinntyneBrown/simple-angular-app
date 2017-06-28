@@ -6,6 +6,7 @@ import {TabTitleComponent} from "./tab-title.component";
     selector: 'ce-tabs',
     host: { 'class': 'tabs' },
     templateUrl: "./tabs.component.html",
+    styleUrls: ["./tabs.component.css"]
 })
 export class TabsComponent implements AfterContentInit {
 
@@ -17,13 +18,15 @@ export class TabsComponent implements AfterContentInit {
 
     activeTitle: TabTitleComponent = null;
 
-    ngAfterContentInit() {                
+    ngAfterContentInit() {              
+        this.updateActiveTabByTitle(this.titles.first);
+
         this.titles.changes.subscribe(x => {       
             this.updateActiveTabByTitle(this.titles.first);
         });
     }
 
-    updateActiveTabByTitle(activeTitle: TabTitleComponent) {
+    updateActiveTabByTitle(activeTitle: TabTitleComponent) {        
         this.updateActiveTab((titleArr) => titleArr.indexOf(activeTitle));
     }
 

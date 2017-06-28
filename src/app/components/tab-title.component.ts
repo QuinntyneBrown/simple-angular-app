@@ -3,6 +3,7 @@ import { TabsComponent } from "./tabs.component";
 
 @Component({
     templateUrl: "./tab-title.component.html",
+    styleUrls:["./tab-title.component.css"],
     selector: "ce-tab-title",
     host: { '(click)': 'updateActiveTab()', '[class.is-active]': 'active', 'class': 'tabs__tab' },
 })
